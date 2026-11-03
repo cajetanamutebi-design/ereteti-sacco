@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Apply for membership - Ereteti Dairy Sacco</title>
+</head>
+<body>
+<header>
+  <p>Ereteti Dairy Sacco</p>
+</header>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="routes.html">Routes</a></li>
+    <li><a href="contact.html">Contact</a></li>
+     <li><a href="register.html">Join</a></li>
+    <li><a href="deliveries.html">Deliveries</a></li>
+  </ul>
+</nav>
+<main>
+    <h1>Apply for membership</h1>
+  <p>
+  <!-- the paragraph from the text sheet: who may join -->
+</p>
+<form action="#" method="post"><fieldset>
+  <legend>Your details</legend>
+  <p>
+    <label for="first_name">First name</label>
+    <input type="text" id="first_name" name="first_name" required>
+  </p>
+  <p>
+    <label for="last_name">Last name</label>
+    <input type="text" id="last_name" name="last_name" required>
+  </p>
+  <p>
+    <label for="national_id">National ID</label>
+    <input type="text" id="national_id" name="national_id" required>
+  </p>
+  <p>
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" pattern="07[0-9]{8}" title="Ten digits, starting 07" placeholder="07XXXXXXXX">
+  </p>
+</fieldset>
+<fieldset>
+  <legend>Your route</legend>
+  <p>
+    <label for="route">Route</label>
+    <select id="route" name="route" required>
+      <option value="">Choose a route</option>
+      <option value="1">Kiserian</option>
+      <option value="2">Ngong</option>
+      <option value="3">Rongai</option>
+    </select>
+  </p>
+  <p>
+    <label for="date_joined">Date joined</label>
+    <input type="date" id="date_joined" name="date_joined" max="2026-09-24">
+  </p>
+</fieldset>
+<p>
+  <label>
+    <input type="checkbox" id="rules" name="rules" required>
+    I agree to the sacco rules
+  </label>
+</p>
+<p>
+  <button type="submit">Apply to join</button>
+</p>
+
+</form>
+</main>
+  <footer>
+    <p>Ereteti Dairy Sacco</p>
+  </footer>
+</body>
+</html>
