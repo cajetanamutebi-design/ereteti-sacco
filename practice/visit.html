@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a farm visit</title>
+</head>
+<body>
+<h1>Book a farm visit</h1>
+<form action="#" method="post">
+<fieldset>
+<legend>Who you are</legend>
+<p>
+<label for="member_no">Member number *</label>
+<input type="text" id="member_no" name="member_no" pattern="ER-[0-9]{4}" placeholder="ER-0000" required>
+</p>
+<p>
+<label for="full_name">Full name *</label>
+<input type="text" id="full_name" name="full_name" maxlength="60" required>
+</p>
+<p>
+<label for="phone">Phone number *</label>
+<input type="tel" id="phone" name="phone" pattern="(\+2547[0-9]{8}|07[0-9]{8})" placeholder="07XXXXXXXX" required>
+</p>
+<p>
+<label for="email">Email</label>
+<input type="email" id="email" name="email">
+</p>
+<p>
+<label for="route">Route *</label>
+<select id="route" name="route" required>
+<option value="">— Choose your route —</option>
+<option value="Kiserian">Kiserian</option>
+<option value="Ngong">Ngong</option>
+<option value="Rongai">Rongai</option>
+</select>
+</p>
+</fieldset>
+<fieldset>
+<legend>The visit</legend>
+<p>
+<label for="visit_date">Preferred date *</label>
+<input type="date" id="visit_date" name="visit_date" min="2026-10-05" required>
+</p>
+<p>
+<label for="visit_time">Preferred time</label>
+<input type="time" id="visit_time" name="visit_time" min="07:00" max="17:00">
+</p>
+<p>
+<label for="cows">Number of cows *</label>
+<input type="number" id="cows" name="cows" min="1" max="50" required>
+</p>
+</fieldset>
+<fieldset>
+<legend>Reason for the visit *</legend>
+<p>
+<input type="radio" id="reason-health" name="reason" value="Animal health" required>
+<label for="reason-health">Animal health</label>
+</p>
+<p>
+<input type="radio" id="reason-feeding" name="reason" value="Feeding advice">
+<label for="reason-feeding">Feeding advice</label>
+</p>
+<p>
+<input type="radio" id="reason-breeding" name="reason" value="Breeding (AI)">
+<label for="reason-breeding">Breeding (AI)</label>
+</p>
+<p>
+<input type="radio" id="reason-milk" name="reason" value="Milk quality">
+<label for="reason-milk">Milk quality</label>
+</p>
+</fieldset>
+<fieldset>
+<legend>Also bring</legend>
+<p>
+<input type="checkbox" id="bring-mineral" name="bring[]" value="Mineral licks">
+<label for="bring-mineral">Mineral licks</label>
+</p>
+<p>
+<input type="checkbox" id="bring-dewormer" name="bring[]" value="Dewormer">
+<label for="bring-dewormer">Dewormer</label>
+</p>
+<p>
+<input type="checkbox" id="bring-feed" name="bring[]" value="Feed sample kit">
+<label for="bring-feed">Feed sample kit</label>
+</p>
+<p>
+<label for="urgency">How urgent?</label>
+<input type="range" id="urgency" name="urgency" min="1" max="5" value="3">
+</p>
+<p>
+<label for="details">Describe the problem</label>
+<textarea id="details" name="details" rows="4"></textarea>
+</p>
+<p>
+<label for="photo">Photo of the animal</label>
+<input type="file" id="photo" name="photo" accept="image/*">
+</p>
+</fieldset>
+<p>
+<button type="submit">Book the visit</button>
+<button type="reset">Clear the form</button>
+</p>
+</form>
+</body>
+</html>

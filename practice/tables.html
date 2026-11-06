@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+</head>
+<body>
+  <table>
+    <caption>Morning deliveries — Thursday 1 October 2026</caption>
+    <thead>
+      <tr>
+        <th scope="col">Member no.</th>
+        <th scope="col">Farmer</th>
+        <th scope="col">Route</th>
+        <th scope="col">Litres</th>
+        <th scope="col">Accepted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">ER-0001</th>
+        <td>Peter Mwangi</td>
+        <td>Gatundu North</td>
+        <td>12.5</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <th scope="row">ER-0004</th>
+        <td>Esther Njeri</td>
+        <td>Gatundu South</td>
+        <td>14.0</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <th scope="row">ER-0005</th>
+        <td>Daniel Kariuki</td>
+        <td>Gatundu South</td>
+        <td>6.5</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <th scope="row">ER-0007</th>
+        <td>Samuel Gitau</td>
+        <td>Kamwangi</td>
+        <td>18.0</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <th scope="row">ER-0008</th>
+        <td>Lucy Wairimu</td>
+        <td>Kamwangi</td>
+        <td>7.5</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Gatundu North route — Thursday 1 October 2026</caption>
+    <thead>
+      <tr>
+        <th scope="col">Member no.</th>
+        <th scope="col">Farmer</th>
+        <th scope="col">Morning (L)</th>
+        <th scope="col">Evening (L)</th>
+        <th scope="col">Day total (L)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">ER-0001</th>
+        <td>Peter Mwangi</td>
+        <td>12.5</td>
+        <td>10.0</td>
+        <td>22.5</td>
+      </tr>
+      <tr>
+        <th scope="row">ER-0002</th>
+        <td>Grace Wanjiku</td>
+        <td colspan="3">No delivery — reported sick</td>
+      </tr>
+      <tr>
+        <th scope="row">ER-0003</th>
+        <td>Joseph Kamau</td>
+        <td>8.0</td>
+        <td>7.5</td>
+        <td>15.5</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">Route total</th>
+        <td>20.5</td>
+        <td>17.5</td>
+        <td>38.0</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <table>
+    <caption>Deliveries by route — Friday 2 October 2026</caption>
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2">Route</th>
+        <th scope="col" rowspan="2">Farmer</th>
+        <th scope="col" colspan="2">Litres</th>
+        <th scope="col" rowspan="2">Total (L)</th>
+      </tr>
+      <tr>
+        <th scope="col">Morning</th>
+        <th scope="col">Evening</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="rowgroup" rowspan="3">Gatundu North</th>
+        <td>Peter Mwangi</td>
+        <td>12.0</td>
+        <td>10.5</td>
+        <td>22.5</td>
+      </tr>
+      <tr>
+        <td>Grace Wanjiku</td>
+        <td>9.0</td>
+        <td>8.5</td>
+        <td>17.5</td>
+      </tr>
+      <tr>
+        <td>Joseph Kamau</td>
+        <td>8.5</td>
+        <td>7.0</td>
+        <td>15.5</td>
+      </tr>
+      <tr>
+        <th scope="rowgroup" rowspan="3">Gatundu South</th>
+        <td>Esther Njeri</td>
+        <td>14.0</td>
+        <td>12.5</td>
+        <td>26.5</td>
+      </tr>
+      <tr>
+        <td>Daniel Kariuki</td>
+        <td>6.5</td>
+        <td>6.0</td>
+        <td>12.5</td>
+      </tr>
+      <tr>
+        <td>Mercy Nyambura</td>
+        <td>10.0</td>
+        <td>9.5</td>
+        <td>19.5</td>
+      </tr>
+      <tr>
+        <th scope="rowgroup" rowspan="2">Kamwangi</th>
+        <td>Samuel Gitau</td>
+        <td>18.0</td>
+        <td>16.5</td>
+        <td>34.5</td>
+      </tr>
+      <tr>
+        <td>Lucy Wairimu</td>
+        <td>7.5</td>
+        <td>7.0</td>
+        <td>14.5</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">All routes</th>
+        <td>85.5</td>
+        <td>77.5</td>
+        <td>163.0</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
