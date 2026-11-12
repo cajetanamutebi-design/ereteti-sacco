@@ -1,5 +1,3 @@
-
-
 const litres = document.querySelector('#litres');
 const litresMessage = document.querySelector('#litres-message');
 
@@ -49,6 +47,7 @@ function checkMember() {
 if (member) {
   member.addEventListener('blur', checkMember);
 }
+
 // ---- deliveries.html: the form, stopped before it is sent ----
 
 const deliveryForm = document.querySelector('#delivery-form');
@@ -73,6 +72,7 @@ function recordDelivery(event) {
 if (deliveryForm) {
   deliveryForm.addEventListener('submit', recordDelivery);
 }
+
 // 4. routes.html: the routes, filtered as you type
 const search = document.querySelector('#route-search');
 const routeCount = document.querySelector('#route-count');
@@ -81,7 +81,7 @@ const routeSections = document.querySelectorAll('main section'); // (a)
 function filterRoutes() {
     const wanted = search.value.trim().toLowerCase(); // (b)
     let shown = 0;
-    
+
     for (const section of routeSections) { // (c)
         const words = section.textContent.toLowerCase();
         if (words.includes(wanted)) { // (d)
@@ -91,10 +91,26 @@ function filterRoutes() {
             section.hidden = true; // (e)
         }
     }
-    
+
     routeCount.textContent = shown + ' of ' + routeSections.length + ' routes';
 }
 
 if (search) {
     search.addEventListener('input', filterRoutes); // (f)
+}
+
+// 5. deliveries.html: the accepted total, added up once at load
+const totalCell = document.querySelector('#accepted-total');
+
+if (totalCell) {
+  const tbody = document.querySelector('tbody');
+  const rows = tbody.querySelectorAll('tr');
+  let total = 0;
+  for (const row of rows) {
+    const cells = row.querySelectorAll('td');
+    if (cells[4].textContent.trim() === 'Yes') {
+      total = total + Number(cells[3].textContent);
+    }
+  }
+  totalCell.textContent = total.toFixed(2);
 }
