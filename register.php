@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-  <title>Apply for membership - Ereteti Dairy Sacco</title>
-</head>
-<body>
-<header>
-  <p>Ereteti Dairy Sacco</p>
-</header>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="routes.html">Routes</a></li>
-    <li><a href="contact.html">Contact</a></li>
-     <li><a href="register.html">Join</a></li>
-    <li><a href="deliveries.html">Deliveries</a></li>
-  </ul>
-</nav>
+<?php
+$page_title = 'Apply for membership';
+include 'includes/header.php';
+?>
+
 <main>
     <h1>Apply for membership</h1>
   <p>Any dairy farmer within reach of one of our three routes may apply to join Ereteti.
      You will need your national ID number and a phone we can reach you on. Once your membership number is issued you may deliver from that day, and you are paid once a month for the litres we accept.</p>
-<form action="#" method="post"><fieldset>
+<form action="process-register.php" method="get"><fieldset>
   <legend>Your details</legend>
   <p>
     <label for="first_name">First name</label>
@@ -70,16 +54,4 @@
 
 </form>
 </main>
-<aside>
-  <h2>Notices</h2>
-  <ul>
-    <li>Milk is paid at <strong>KSh 52.00 a litre</strong> from 1 October 2026.</li>
-    <li>Annual General Meeting: Saturday 17 October, 10 a.m., at the Kiserian collection centre.</li>
-    <li>New members: <a href="register.html">apply to join</a>. You need a national ID and a bank account.</li>
-  </ul>
-</aside>
-  <footer>
-    <p>Ereteti Dairy Sacco</p>
-  </footer>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>

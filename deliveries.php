@@ -1,28 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-  <title>Deliveries - Ereteti Dairy Sacco</title>
-</head>
-<body>
-<header>
-  <p>Ereteti Dairy Sacco</p>
-</header>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="routes.html">Routes</a></li>
-    <li><a href="contact.html">Contact</a></li>
-     <li><a href="register.html">Join</a></li>
-    <li><a href="deliveries.html">Deliveries</a></li>
-  </ul>
-</nav>
+<?php
+$page_title = 'Deliveries';
+include 'includes/header.php';
+?>
+
 <main>
   <h1>Deliveries</h1>
   <p>Milk received at the Olepolos centre on the Kiserian route, Monday 12 October 2026. Both sessions are listed: the morning collection from 6.30am and the evening collection from 4.00pm.</p>
+  <h2>Record a delivery</h2>
+
+<form id="delivery-form" action="#" method="post">
+  <label for="member">Member number</label>
+  <input type="text" id="member" name="member_no"
+         placeholder="ER-0000" required>
+  <p id="member-message" class="message"
+     aria-live="polite"></p>
+
+  <label for="session">Session</label>
+  <select id="session" name="session" required>
+    <option value="">Choose a session</option>
+    <option value="MORNING">Morning</option>
+    <option value="EVENING">Evening</option>
+  </select>
+
+  <label for="litres">Litres</label>
+  <input type="number" id="litres" name="litres"
+         step="0.01" required>
+  <p id="litres-message" class="message"
+     aria-live="polite"></p>
+
+  <button type="submit">Record delivery</button>
+  <p id="form-message" aria-live="polite"></p>
+</form>
+
   <div class="table-scroll">
 <table>
   <caption>Milk received, Monday 12 October 2026</caption>
@@ -89,17 +98,4 @@
 </div>
 <p>Joseph Kamau's morning load failed the alcohol test and was rejected, so it is not counted in the day's total. It is still listed: a rejected load is recorded, never deleted, because the farmer has a right to see what happened to their milk.</p>
 </main>
-<aside>
-  <h2>Notices</h2>
-  <ul>
-    <li>Milk is paid at <strong>KSh 52.00 a litre</strong> from 1 October 2026.</li>
-    <li>Annual General Meeting: Saturday 17 October, 10 a.m., at the Kiserian collection centre.</li>
-    <li>New members: <a href="register.html">apply to join</a>. You need a national ID and a bank account.</li>
-  </ul>
-</aside>
-  <footer>
-    <p>Ereteti Dairy Sacco</p>
-  </footer>
-</body>
-</html>
-
+<?php include 'includes/footer.php'; ?>
