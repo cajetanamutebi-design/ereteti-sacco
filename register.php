@@ -7,7 +7,7 @@ include 'includes/header.php';
     <h1>Apply for membership</h1>
   <p>Any dairy farmer within reach of one of our three routes may apply to join Ereteti.
      You will need your national ID number and a phone we can reach you on. Once your membership number is issued you may deliver from that day, and you are paid once a month for the litres we accept.</p>
-<form action="process-register.php" method="get"><fieldset>
+<form action="process-register.php" method="post"><fieldset>
   <legend>Your details</legend>
   <p>
     <label for="first_name">First name</label>
